@@ -1,6 +1,6 @@
 
 # use the funktion docker image for tools
-workspace.runtime.docker.image="funktion/funktion-builder:latest"
+workspace.runtime.docker.image="funktion/funktion-che-workspace:latest"
 
 workspace.commands[0].name = "apply"
 workspace.commands[0].type = "funktion"
