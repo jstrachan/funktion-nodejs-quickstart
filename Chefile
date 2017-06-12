@@ -1,0 +1,3 @@
+
+# use the funktion docker image for tools
+workspace.runtime.docker.image="funktion/funktion-builder:latest"
