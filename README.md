@@ -26,10 +26,10 @@ cd funktion-nodejs-quickstart
 * now create your function(s) and watch for local changes to your files type:
 
 ```
-funktion apply -f src -w
+funktion apply -f src
 ```
 
-* if you open another shell you should be able to view the functions created via
+* you should be able to view the functions created via
 
 ```
 funktion get fn
@@ -40,3 +40,11 @@ funktion get fn
 ```
 kubectl get pod -w
 ```
+
+* to enter watch mode where you can keep editing the source code and the functions update in real time try add `-w`:
+
+```
+funktion apply -f src -w
+```
+
+* then if you change a source file in the `src` folder you should see the pod for the function restart and load the new source.
