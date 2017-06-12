@@ -1,3 +1,21 @@
 
 # use the funktion docker image for tools
 workspace.runtime.docker.image="funktion/funktion-builder:latest"
+
+workspace.commands[0].name = "apply"
+workspace.commands[0].type = "funktion"
+workspace.commands[0].commandLine = "funktion apply -f ${current.project.path}"
+#workspace.commands[0].attributes.previewUrl = "http://${server.port.80}/${current.project.relpath}"
+
+workspace.commands[1].name = "watch"
+workspace.commands[1].type = "funktion"
+workspace.commands[1].commandLine = "funktion apply -f ${current.project.path} -w"
+
+workspace.commands[2].name = "list functions"
+workspace.commands[2].type = "funktion"
+workspace.commands[2].commandLine = "funktion get fn"
+
+workspace.commands[3].name = "list flows"
+workspace.commands[3].type = "funktion"
+workspace.commands[3].commandLine = "funktion get flow"
+
